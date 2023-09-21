@@ -49,3 +49,8 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+.instrument {
+  width: 9.375rem;
+  height: 7.8125rem;
+}
