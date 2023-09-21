@@ -81,8 +81,11 @@ I welcome contributions from everyone! If you'd like to contribute, follow these
 ## Acknowledgements
 
   I want to express my gratitude to:
+
     - [The Odin Project](https://www.theodinproject.com/) - for their tutorials and inspiration that led me to create this Drum Kit project.
     - [Wes Bos](https://github.com/wesbos/JavaScript30) - for their tutorials and work on providing the starting HTML & CSS code and for providing the starting sound files.
+
+    (credit sources for images used)
 
 ## Contact
 
