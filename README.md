@@ -17,7 +17,7 @@ Welcome to my Drum Kit project! This is a simple web-based application that lets
 
 ## Demo
 
-You can try out the Drum Kit here: [Demo](https://your-demo-link.com)
+You can try out the Drum Kit here: [Demo](https://elijah80.github.io/drum-kit/)
 
 ## Features
 
@@ -38,7 +38,7 @@ Follow these easy steps to set up the project on your computer for development a
 1. **Clone the repository**: Click the "Code" button above and copy the URL. Open your terminal/command prompt and run:
 
      ```bash
-     git clone https://github.com/yourusername/drum-kit.git
+     git clone https://github.com/Elijah80/drum-kit.git
 
      ```
 
@@ -80,8 +80,10 @@ I welcome contributions from everyone! If you'd like to contribute, follow these
 
 ## Acknowledgements
 
-  I want to express my gratitude to [Name of the resource or person] for their tutorials and inspiration that helped me create this Drum Kit project.
+  I want to express my gratitude to:
+    - [The Odin Project](https://www.theodinproject.com/) - for their tutorials and inspiration that led me to create this Drum Kit project.
+    - [Wes Bos](https://github.com/wesbos/JavaScript30) - for their tutorials and work on providing the starting HTML & CSS code and for providing the starting sound files.
 
 ## Contact
 
-  If you have any questions, suggestions, or just want to say hi, feel free to reach out to me at (your@email.com).
+  If you have any questions, suggestions, or just want to say hi, feel free to [email](elijahcravens46@gmail.com) me.
