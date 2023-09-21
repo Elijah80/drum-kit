@@ -2,7 +2,7 @@
 
 Welcome to my Drum Kit project! This is a simple web-based application that lets you play drums by either clicking on the drum pads or using your computer keyboard. Even if you're new to coding, you can easily get started with this fun project.
 
-![Drum Kit Screenshot](screenshot.png)
+![Drum Kit Screenshot](./images/project_screenshot.png)
 
 ## Table of Contents
 
@@ -84,7 +84,7 @@ I welcome contributions from everyone! If you'd like to contribute, follow these
 
     - [The Odin Project](https://www.theodinproject.com/) - for their tutorials and inspiration that led me to create this Drum Kit project.
     - [Wes Bos](https://github.com/wesbos/JavaScript30) - for their tutorials and work on providing the starting HTML & CSS code and for providing the starting sound files.
-    
+
 ## Contact
 
   If you have any questions, suggestions, or just want to say hi, feel free to [email](elijahcravens46@gmail.com) me.

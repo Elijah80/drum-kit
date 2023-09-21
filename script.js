@@ -1,7 +1,6 @@
 const keys = document.querySelector('.keys');
 const body = document.body;
 const dataKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76];
-const soundNames = ['clap', 'hihat', 'kick', 'openhat', 'boom', 'ride', 'snare', 'tom', 'tink'];
 
 dataKeys.forEach((key) => {
   const div = document.createElement('div');
@@ -80,3 +79,4 @@ dataKeys.forEach((key) => {
 
   body.appendChild(audio);
 })
+
