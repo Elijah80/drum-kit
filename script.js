@@ -74,6 +74,12 @@ function createKeyElement(key) {
   div.appendChild(img);
   div.appendChild(kbd);
   div.appendChild(span);
+  div.addEventListener('mousedown', function(){
+    playDrums(String.fromCharCode((div.getAttribute('data-key'))));
+  });
+  div.addEventListener('mouseup', function(){
+    removePlayingClass();
+  });
 
   keys.appendChild(div);
 
@@ -86,18 +92,18 @@ dataKeys.forEach((key) => {
 })
 
 /** function to select the corresponding instrument **/
-function playDrums(e) {
+function playDrums(dataKey) {
   const instruments = document.querySelectorAll('.key');
   const sounds  = document.querySelectorAll('audio');
 
   instruments.forEach((instrument) => {
-    const dataKey = String.fromCharCode(instrument.getAttribute('data-key'));
+    const instrumentDataKey = String.fromCharCode(instrument.getAttribute('data-key'));
 
-    if (dataKey === e){
+    if (dataKey === instrumentDataKey){
       instrument.classList.toggle('playing');
 
       sounds.forEach((sound) => {
-        if (dataKey === String.fromCharCode(sound.getAttribute('data-key'))) {
+        if (instrumentDataKey === String.fromCharCode(sound.getAttribute('data-key'))) {
           sound.currentTime = 0;
           sound.play();
         }
