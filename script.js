@@ -1,8 +1,7 @@
 const keys = document.querySelector('.keys');
-const body = document.body;
-const dataKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76];
+const dataKeys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 
-dataKeys.forEach((key) => {
+function createKeyElement(key) {
   const div = document.createElement('div');
   const img = document.createElement('img');
   const kbd = document.createElement('kbd');
@@ -10,60 +9,60 @@ dataKeys.forEach((key) => {
   const audio = document.createElement('audio');
 
   div.classList.add('key');
-  div.setAttribute('data-key', key);
+  div.setAttribute('data-key', key.charCodeAt(0));
 
   img.classList.add('instrument');
 
-  kbd.textContent = String.fromCharCode(key);
+  kbd.textContent = key.toUpperCase();
 
   span.classList.add('sound');
 
-  audio.setAttribute('data-key', key);
+  audio.setAttribute('data-key', key.charCodeAt(0));
 
   switch(key){
-    case 65:
-      span.textContent = 'clap';
+    case 'a':
       img.setAttribute('src', './images/instruments/clap_drum.png');
+      span.textContent = 'clap';
       audio.setAttribute('src', './sounds/clap.wav');
       break;
-    case 83:
-      span.textContent = 'hihat';
+    case 's':
       img.setAttribute('src', './images/instruments/hihat_drum.png');
+      span.textContent = 'hihat';
       audio.setAttribute('src', './sounds/hihat.wav');
       break;
-    case 68:
-      span.textContent = 'kick';
+    case 'd':
       img.setAttribute('src', './images/instruments/kick_drum.png');
+      span.textContent = 'kick';
       audio.setAttribute('src', './sounds/kick.wav');
       break;
-    case 70:
-      span.textContent = 'openhat';
+    case 'f':
       img.setAttribute('src', './images/instruments/openhat_drum.png');
+      span.textContent = 'openhat';
       audio.setAttribute('src', './sounds/openhat.wav');
       break;
-    case 71:
-      span.textContent = 'boom';
+    case 'g':
       img.setAttribute('src', './images/instruments/boom_drum.png');
+      span.textContent = 'boom';
       audio.setAttribute('src', './sounds/boom.wav');
       break;
-    case 72:
-      span.textContent = 'ride';
+    case 'h':
       img.setAttribute('src', './images/instruments/ride_drum.png');
+      span.textContent = 'ride';
       audio.setAttribute('src', './sounds/ride.wav');
       break;
-    case 74:
-      span.textContent = 'snare';
+    case 'j':
       img.setAttribute('src', './images/instruments/snare_drum.png');
+      span.textContent = 'snare';
       audio.setAttribute('src', './sounds/snare.wav');
       break;
-    case 75:
-      span.textContent = 'tom';
+    case 'k':
       img.setAttribute('src', './images/instruments/tom_drum.png');
+      span.textContent = 'tom';
       audio.setAttribute('src', './sounds/tom.wav');
       break;
-    case 76:
-      span.textContent = 'tink';
+    case 'l':
       img.setAttribute('src', './images/instruments/tink_drum.png');
+      span.textContent = 'tink';
       audio.setAttribute('src', './sounds/tink.wav');
       break;
     default:
@@ -77,6 +76,13 @@ dataKeys.forEach((key) => {
 
   keys.appendChild(div);
 
-  body.appendChild(audio);
+  document.body.appendChild(audio);
+}
+
+dataKeys.forEach((key) => {
+  createKeyElement(key);
 })
 
+document.addEventListener('keydown', (event) => {
+  
+})
