@@ -1,6 +1,7 @@
 const keys = document.querySelector('.keys');
 const dataKeys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 
+/** Used to create the instrument cards and append the created elements to their parent elements **/
 function createKeyElement(key) {
   const div = document.createElement('div');
   const img = document.createElement('img');
@@ -79,10 +80,44 @@ function createKeyElement(key) {
   document.body.appendChild(audio);
 }
 
+/** Loop through dataKeys to create a card for each instrument **/
 dataKeys.forEach((key) => {
   createKeyElement(key);
 })
 
+/** function to select the corresponding instrument **/
+function playDrums(e) {
+  const instruments = document.querySelectorAll('.key');
+  const sounds  = document.querySelectorAll('audio');
+
+  instruments.forEach((instrument) => {
+    const dataKey = String.fromCharCode(instrument.getAttribute('data-key'));
+
+    if (dataKey === e){
+      instrument.classList.toggle('playing');
+
+      sounds.forEach((sound) => {
+        if (dataKey === String.fromCharCode(sound.getAttribute('data-key'))) {
+          sound.currentTime = 0;
+          sound.play();
+        }
+      })
+    }
+  })
+}
+
+
+function removePlayingClass() {
+  const playing = document.querySelector('.playing');
+  playing.classList.remove('playing');
+}
+
+
+/** Event Listeners **/
 document.addEventListener('keydown', (event) => {
-  
+  playDrums(event.key);
+})
+
+document.addEventListener('keyup', (event) => {
+  removePlayingClass();
 })
